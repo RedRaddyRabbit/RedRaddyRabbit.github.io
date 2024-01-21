@@ -1,0 +1,157 @@
+body{
+    background-color: black;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.hero{
+    width: 100%;
+    min-height: 100vh;
+    /*background-image: url(images/zerpix-icon.png)*/;
+    background-position: center;
+    background-size: cover;
+    padding: 10px 10%;
+    overflow: hidden;
+    position: relative;
+}
+nav{
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    width: 120px;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 15px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 400;
+}
+.font-bold{
+    font-weight: 700;
+}
+.justify-center{
+    justify-content: center;
+}
+/*.login-btn{
+    text-decoration: none;
+    color: #fff;
+    margin-right: 15px;
+    font-weight: 400;
+}*/
+.btn{
+    display: inline-block;
+    text-decoration: none;
+    padding: 14px 40px;
+    color: #000;
+    background-color: rgb(255, 255, 255); /*background-image: linear-gradient(45deg, rgb(97, 0, 0), rgb(255, 0, 0));*/
+    font-size: 14px;
+    border-radius: 10px; /*30px*/
+    /*border-top-right-radius: 0px;*/ 
+    transition: 0.5s;   
+}
+.content{
+    margin-top: 0%;
+    max-width: 600px;
+}
+.content h1{
+    font-size: 70px;
+    color: #fff;
+}
+.content p{
+    margin: 10px 0 30px;
+    color: #fff;
+    animation-delay: 0.5s;
+}
+.content .btn{
+    padding: 15px 80px;
+    font-size: 16px;
+    animation-delay: 1s;
+}
+.btn:hover{
+    background-color: rgb(200, 0, 0); /*border-radius: 30px;*/
+    color: white;
+}
+
+
+
+
+.anim{
+    opacity: 0;
+    transform: translateY(-30px);
+    animation: moveup 1s ease forwards;
+}
+@keyframes moveup {
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+.anim2{
+    transform: scale(0%);
+    animation: appearing 1s ease forwards;
+}
+@keyframes appearing {
+    100%{
+        transform: scale(100%);
+    }
+}
+.nav-link{
+    opacity: 0;
+    animation: appearing2 1s ease forwards;
+}
+@keyframes appearing2 {
+    100%{
+        opacity: 1;
+    }
+}
+.feature1{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    will-change: transform;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    z-index: -20;
+}
+.feature1 video{
+    width: 100%;
+    /*object-fit: cover;*/
+    top: 50%;
+    object-position: 90% 50%;
+}
+
+@media (min-width: 768px) {
+    .feature1{
+        display: flex;
+        width: 100%;
+        height: 100%;
+    }
+}
+/*
+@media (max-aspect-ratio: 16/9) {
+    .feature1{
+        width: auto;
+        height: 100%;
+    }
+}*/
+.bg-radial-gradient {
+    display: flex;
+    width: 100%;
+    height: 100svh;
+    position: fixed;
+    opacity: .45;
+    background-image: radial-gradient(circle at 40% 100%,#850000 0,transparent 70%)
+}
